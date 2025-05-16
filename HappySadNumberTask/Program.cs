@@ -1,7 +1,20 @@
+﻿using System;
 ﻿namespace HappySadNumberTask
 {
     internal class Program
     {
+        static int sumOfSquares(int input)
+        {
+            string inputToStr = Convert.ToString(input);
+            int sum = 0;
+            foreach (char digit in inputToStr)
+            {
+                int digitToInt = Convert.ToInt32(Convert.ToString(digit));
+                sum = sum + Convert.ToInt32(Math.Pow(digitToInt,2));
+            }
+            return sum;
+        }
+        
         static void Main(string[] args)
         {
             /*There are said to be happy numbers and sad numbers.
@@ -25,6 +38,8 @@
             //The program should take a number as input and output whether the number is happy or sad
             //test your program with the inputs of 19 and 20
             //show your output in the readme file
+            
+           
         }
     }
 }
