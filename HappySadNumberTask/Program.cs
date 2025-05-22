@@ -1,3 +1,5 @@
+﻿using System.Collections;
+﻿using System.Collections.Generic;
 ﻿using System;
 ﻿namespace HappySadNumberTask
 {
@@ -15,9 +17,30 @@
             return sum;
         }
         
+        static bool IsHappy(int input)
+        {
+                List<int> steps = new List<int>();
+                bool isHappy = true;
+                while (true)
+                    {
+                        steps.Add(sumOfSquares(input));
+                        input = sumOfSquares(input);
+                      foreach (int i in steps)
+                      {
+                          if (input == i)
+                          {
+                              isHappy = false;
+                              break;
+                          }
+                      }
+                    
+                    }
+                return isHappy;
+        }
+    
         static void Main(string[] args)
         {
-
+            int number = Convert.ToInt32(Console.ReadLine());
             
             /*There are said to be happy numbers and sad numbers.
             Happy numbers will reduce to 1 when the digits belonging to the numbers are squared and added together to produce another number and the process is repeated. e.g. when we take 19
