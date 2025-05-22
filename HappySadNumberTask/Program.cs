@@ -40,7 +40,7 @@
     
         static void Main(string[] args)
         {
-            int number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(IsHappy(Convert.toInt32(Console.ReadLine())));
             
             /*There are said to be happy numbers and sad numbers.
             Happy numbers will reduce to 1 when the digits belonging to the numbers are squared and added together to produce another number and the process is repeated. e.g. when we take 19
