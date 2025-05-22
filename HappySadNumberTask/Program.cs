@@ -17,6 +17,8 @@
         
         static void Main(string[] args)
         {
+
+            
             /*There are said to be happy numbers and sad numbers.
             Happy numbers will reduce to 1 when the digits belonging to the numbers are squared and added together to produce another number and the process is repeated. e.g. when we take 19
             1 squared is 1 , 9 squared is 81. 81 +1 = 82
